@@ -1,12 +1,12 @@
 <?php
 if (isset($_GET['action']) == 'delete')
 {
-    $idmarca=$_GET['idmarca'];
-    $sql="DELETE FROM tb_marca WHERE idmarca=?";
+    $idproducto=$_GET['idproducto'];
+    $sql="DELETE FROM tb_producto WHERE idproducto=?";
     $statement=$mysqli->prepare($sql);
-    $statement->bind_param('i',$idmarca);
+    $statement->bind_param('i',$idproducto);
     $statement->execute();
     $mysqli->close();
-    header("Location: marca_index.php");    
+    header("Location: producto.php");    
 }
 ?>

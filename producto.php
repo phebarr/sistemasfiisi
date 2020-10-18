@@ -66,9 +66,9 @@ $result = mysqli_query($mysqli, $sql);
                                 <td><?php echo $row["estd_pro"]; ?></td>
                                 <td><?php echo $row["nomb_mar"]; ?></td>
                                 <td>
-                                    <a href="marca_edit.php?idmarca=<?php echo $row['idmarca']?>" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
-                                    <a href="marca_index.php?action=delete&idmarca=<?php echo $row['idmarca']?>"
-                                       onclick="return confirm('Seguro de eliminar a: <?php echo $row['nomb_mar']?>')" class="btn btn-info"><i class="fa fa-trash"></i></a>
+                                    <a href="prod_edit.php?idproducto=<?php echo $row['idproducto']?>" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
+                                    <a href="producto.php?action=delete&idproducto=<?php echo $row['idproducto']?>"
+                                       onclick="return confirm('Seguro de eliminar a: <?php echo $row['nomb_pro']?>')" class="btn btn-info"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                             <?php

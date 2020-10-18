@@ -30,8 +30,10 @@ include_once ("php/conexion.php");
                 $stock_pro = $_POST["stock_pro"];
                 $freg_pro = date('Y-m-d H:i:s');
                 $estd_pro = $_POST["InputEstado"];
+                $idmarca = $_POST["InputIDMarca"];
+                $idsubcategoria = $_POST["InputIDSubCat"];
 
-                $sql = "insert into tb_marca values(?,?,?,?,?)";
+                $sql = "insert into tb_marca values(?,?,?,?,?,?,?,?)";
                 $statement = $mysqli->prepare($sql);
                 $statement->bind_param('isssi', $idmarca, $nomb_mar, $imag_mar, $freg_mar, $estd_mar);
                 $statement->execute();
