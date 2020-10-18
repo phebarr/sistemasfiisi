@@ -1,6 +1,6 @@
 <?php
 require_once './php/conexion.php';
-$sql = "SELECT * from tb_subcategoria";
+$sql = "select * from tb_marca";
 $result = mysqli_query($mysqli, $sql);
 
 ?>
@@ -26,10 +26,10 @@ $result = mysqli_query($mysqli, $sql);
         <section class="container" style="margin-top: 70px" >
             <div class="row">
                 <div class="col-md-8">
-                    <h3 style="margin:0">Listado de la Tabla Productos</h3>
+                    <h3 style="margin:0">Listado de la Tabla de Marca</h3>
                 </div>                
                 <div class="col-md-4 text-right">
-                    <a href="prod_add.php" class="btn btn-success">
+                    <a href="marca_add.php" class="btn btn-success">
                         <i class="fa fa-newspaper-o"></i> Agregar</a>
                 </div>                
             </div>
@@ -42,8 +42,7 @@ $result = mysqli_query($mysqli, $sql);
                     <thead>
                         <tr>
                             <th width="10%" style="text-align: center">CODIGO</th>
-                            <th width="10%" style="text-align: center">NOMBRE</th>
-                            <th width="10%" style="text-align: center">DESCRIPCIÓN</th>
+                            <th width="20%" style="text-align: center">NOMBRE</th>
                             <th width="20%" style="text-align: center">IMAGEN</th>
                             <th width="10%" style="text-align: center">ESTADO</th>
                             <th width="10%" style="text-align: center">OPCIONES</th>
@@ -54,11 +53,11 @@ $result = mysqli_query($mysqli, $sql);
                         while ($row = mysqli_fetch_array($result)) {
                             ?>
                             <tr>
-                                <td><?php echo $row["idsubcategoria"]; ?></td>
-                                <td><?php echo $row["nomb_sub"]; ?></td>
-                                <td><?php echo $row["desc_sub"]; ?></td>
-                                <td><img  width="100%" src="<?php echo $row["imag_sub"]; ?>" alt=""/></td>
-                                <td><?php echo $row["estd_sub"]; ?></td>
+                                <td><?php echo $row["idmarca"]; ?></td>
+                                <td><?php echo $row["nomb_mar"]; ?></td>
+                                <td><img  width="20%" src="<?php echo $row["imag_mar"]; ?>" alt=""/></td>
+                                 
+                                <td><?php echo $row["estd_mar"]; ?></td>
                                 <td>
                                     <a href="marca_edit.php?idmarca=<?php echo $row['idmarca']?>" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
                                     <a href="marca_index.php?action=delete&idmarca=<?php echo $row['idmarca']?>"

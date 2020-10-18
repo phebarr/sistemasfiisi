@@ -26,7 +26,7 @@ include_once ("php/conexion.php");
                 $nomb_pro = $_POST["InputNombre"];
                 $desc_pro = $_POST["InputDesc"];
                 $pven = $_POST["InputPrecio"];
-                $imag_pro = $_POST["img_pro"];
+                $imag_pro = $_POST["InputImagen"];
                 $stock_pro = $_POST["stock_pro"];
                 $freg_pro = date('Y-m-d H:i:s');
                 $estd_pro = $_POST["InputEstado"];
@@ -78,7 +78,7 @@ include_once ("php/conexion.php");
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Imagen</label>
                     <div class="col-sm-4">
-                        <input type="file" name="image_mar" value="images/marcas/no-disponible.jpg">
+                        <input type="file" name="InputImagen" value="images/marcas/no-disponible.jpg">
                     </div>
                 </div>
                 <div class="form-group">

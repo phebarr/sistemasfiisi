@@ -94,7 +94,7 @@ include_once ("php/conexion.php");
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Imagen</label>
                     <div class="col-sm-4">
-                        <input type="text" name="InputImagen" value="<?php echo $row['imag_mar']?>">
+                        <input type="file" name="InputImagen" value="<?php echo $row['imag_mar']?>">
                     </div>
                 </div>  
                 <div class="form-group">
