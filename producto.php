@@ -29,7 +29,7 @@ $result = mysqli_query($mysqli, $sql);
                     <h3 style="margin:0">Listado de la Tabla Productos</h3>
                 </div>                
                 <div class="col-md-4 text-right">
-                    <a href="marca_add.php" class="btn btn-success">
+                    <a href="prod_add.php" class="btn btn-success">
                         <i class="fa fa-newspaper-o"></i> Agregar</a>
                 </div>                
             </div>

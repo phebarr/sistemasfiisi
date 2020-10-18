@@ -13,10 +13,10 @@
             <ul class="nav navbar-nav ">
              <li class="active"><a href="index.php">Inicio</a></li>    
              <li class="active" style="margin-left: 10px;"><a href="marca_index.php">Marca</a></li>
-             <li class="active" style="margin-left: 10px;"><a href="#">Categoria</a></li>
-             <li class="active" style="margin-left: 10px;"><a href="#">Sub Categoria</a></li>
+             <li class="active" style="margin-left: 10px;"><a href="categoria.php">Categoria</a></li>
+             <li class="active" style="margin-left: 10px;"><a href="sub_categoria.php">Sub Categoria</a></li>
              <li class="active" style="margin-left: 10px;"><a href="producto.php">Producto</a></li>
-             <li class="active" style="margin-left: 10px;"><a href="#">Cliente</a></li>
+             <li class="active" style="margin-left: 10px;"><a href="cliente.php">Cliente</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

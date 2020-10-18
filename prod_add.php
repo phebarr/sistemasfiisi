@@ -16,17 +16,20 @@ include_once ("php/conexion.php");
             ?>   
         </header>
         <hr>       
-        <h2 style="margin-top: 50px; padding-left: 250px">DATOS DE LA MARCA   >>   AGREGAR DATOS</h2>
+        <h2 style="margin-top: 50px; padding-left: 250px">DATOS DEL PRODUCTO   >>   AGREGAR DATOS</h2>
         <hr>
         <section class="container" style="margin-top: 30px" >
 
             <?php
             if (isset($_POST['add'])) {
-                $idmarca = $_POST["InputID"];
-                $nomb_mar = $_POST["InputNombre"];
-                $imag_mar = $_POST["InputImagen"];
-                $freg_mar = date('Y-m-d H:i:s');
-                $estd_mar = $_POST["InputEstado"];
+                $idproducto = $_POST["InputID"];
+                $nomb_pro = $_POST["InputNombre"];
+                $desc_pro = $_POST["InputDesc"];
+                $pven = $_POST["InputPrecio"];
+                $imag_pro = $_POST["img_pro"];
+                $stock_pro = $_POST["stock_pro"];
+                $freg_pro = date('Y-m-d H:i:s');
+                $estd_pro = $_POST["InputEstado"];
 
                 $sql = "insert into tb_marca values(?,?,?,?,?)";
                 $statement = $mysqli->prepare($sql);
@@ -46,7 +49,7 @@ include_once ("php/conexion.php");
             }
             ?>
 
-            <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+            <form class="form-horizontal" action="" method="post">
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Código</label>
                     <div class="col-sm-2">
@@ -54,17 +57,36 @@ include_once ("php/conexion.php");
                     </div>
                 </div>  
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Nombres</label>
+                    <label class="col-sm-3 control-label">Nombre del Producto</label>
                     <div class="col-sm-4">
-                        <input type="text" name="InputNombre" class="form-control" placeholder="Nombres" required>
+                        <input type="text" name="InputNombre" class="form-control" placeholder="Nombre del producto" required>
+                    </div>
+                </div>     
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Descripción</label>
+                    <div class="col-sm-3">
+                        <textarea type="text" name="InputDesc" class="form-control" placeholder="Descripción" required></textarea>
+                    </div>
+                </div> 
+                 
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Precio de Venta</label>
+                    <div class="col-sm-2">
+                        <input type="text" name="InputPrecio" class="form-control" placeholder="Precio" required>
                     </div>
                 </div>                  
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Imagen</label>
                     <div class="col-sm-4">
-                        <input type="file" name="InputImagen" value="images/marcas/no-disponible.jpg">
+                        <input type="file" name="image_mar" value="images/marcas/no-disponible.jpg">
                     </div>
-                </div>  
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Stock</label>
+                    <div class="col-sm-2">
+                        <input type="text" name="InputPrecio" class="form-control" placeholder="Stock" required>
+                    </div>
+                </div>      
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Estado</label>
                     <div class="col-sm-3">
