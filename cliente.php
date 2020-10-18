@@ -26,7 +26,7 @@ $result = mysqli_query($mysqli, $sql);
         <section class="container" style="margin-top: 70px" >
             <div class="row">
                 <div class="col-md-8">
-                    <h3 style="margin:0">Listado de la Tabla Productos</h3>
+                    <h3 style="margin:0">Listado de la Tabla Clientes</h3>
                 </div>                
                 <div class="col-md-4 text-right">
                     <a href="prod_add.php" class="btn btn-success">
@@ -43,12 +43,10 @@ $result = mysqli_query($mysqli, $sql);
                         <tr>
                             <th width="10%" style="text-align: center">CODIGO</th>
                             <th width="10%" style="text-align: center">NOMBRE</th>
-                            <!-- <th width="10%" style="text-align: center">DESCRIPCIÓN</th> -->
-                            <th width="10%" style="text-align: center">PRECIO</th>
-                            <th width="10%" style="text-align: center">IMAGEN</th>
-                            <th width="10%" style="text-align: center">STOCK</th>
-                            <th width="10%" style="text-align: center">ESTADO</th>
-                            <th width="10%" style="text-align: center">MARCA</th>
+                            <th width="10%" style="text-align: center">DNI</th>
+                            <th width="10%" style="text-align: center">TELÉFONO</th>
+                            <th width="10%" style="text-align: center">DIRECCIÓN</th>
+                            <th width="10%" style="text-align: center">EMAIL</th>
                             <th width="10%" style="text-align: center">OPCIONES</th>
                         </tr>
                     </thead>
@@ -57,14 +55,12 @@ $result = mysqli_query($mysqli, $sql);
                         while ($row = mysqli_fetch_array($result)) {
                             ?>
                             <tr>
-                                <td><?php echo $row["idproducto"]; ?></td>
-                                <td><?php echo $row["nomb_pro"]; ?></td>
-                                <!-- <td><?php echo $row["desc_pro"]; ?></td> -->
-                                <td><?php echo $row["pven_pro"]; ?></td>
-                                <td><img  width="100%" src="<?php echo $row["imag_pro"]; ?>" alt=""/></td>
-                                <td><?php echo $row["stoc_pro"]; ?></td>
-                                <td><?php echo $row["estd_pro"]; ?></td>
-                                <td><?php echo $row["nomb_mar"]; ?></td>
+                                <td><?php echo $row["idcliente"]; ?></td>
+                                <td><?php echo $row["nomb_cli"]; ?></td>
+                                <td><?php echo $row["ndni_cli"]; ?></td>
+                                <td><?php echo $row["ntel_cli"]; ?></td>
+                                <td><?php echo $row["dire_cli"]; ?></td>
+                                <td><?php echo $row["mail_cli"]; ?></td>
                                 <td>
                                     <a href="marca_edit.php?idmarca=<?php echo $row['idmarca']?>" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
                                     <a href="marca_index.php?action=delete&idmarca=<?php echo $row['idmarca']?>"

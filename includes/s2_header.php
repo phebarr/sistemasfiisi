@@ -10,7 +10,7 @@
             <a class="navbar-brand visible-xs-block visible-sm-block" href="">Inicio</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav ">
+            <ul class="nav navbar-nav propiedad ">
              <li class="active"><a href="index.php">Inicio</a></li>    
              <li class="active" style="margin-left: 10px;"><a href="marca_index.php">Marca</a></li>
              <li class="active" style="margin-left: 10px;"><a href="categoria.php">Categoria</a></li>

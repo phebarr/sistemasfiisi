@@ -33,9 +33,9 @@ include_once ("php/conexion.php");
                 $idmarca = $_POST["InputIDMarca"];
                 $idsubcategoria = $_POST["InputIDSubCat"];
 
-                $sql = "insert into tb_marca values(?,?,?,?,?,?,?,?)";
+                $sql = "insert into tb_prod values(?,?,?,?,?,?,?,?)";
                 $statement = $mysqli->prepare($sql);
-                $statement->bind_param('isssi', $idmarca, $nomb_mar, $imag_mar, $freg_mar, $estd_mar);
+                $statement->bind_param('isssi', $idproducto, $nomb_pro, $desc_pro, $pven, $imag_pro, $stock_pro , $freg_pro, $estd_pro, $idmarca, $idsubcategoria);
                 $statement->execute();
                 $mysqli->close();
 
@@ -105,11 +105,23 @@ include_once ("php/conexion.php");
                         <button type="submit" name="add" class="btn btn-primary">
                             <i class="fa fa-floppy-o" aria-hidden="true"> Guardar Datos</i>
                         </button>
-                        <a href="index.php" class="btn btn-danger">
+                        <a href="producto.php" class="btn btn-danger">
                             <i class="fa fa-ban" aria-hidden="true"></i> Cancelar
                         </a>
                     </div>
-                </div>             
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">ID Marca</label>
+                    <div class="col-sm-2">
+                        <input type="text" name="InputPrecio" class="form-control" placeholder="Stock" required>
+                    </div>
+                </div>  
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">ID Sub Categoría</label>
+                    <div class="col-sm-2">
+                        <input type="text" name="InputPrecio" class="form-control" placeholder="Stock" required>
+                    </div>
+                </div>               
             </form>
         </section>
         <footer>

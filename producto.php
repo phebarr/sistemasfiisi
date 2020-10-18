@@ -36,7 +36,7 @@ $result = mysqli_query($mysqli, $sql);
             <br>
             <div class="row">
                 <?php
-                    require_once './marca_delete.php';
+                    require_once './prod_delete.php';
                 ?>
                 <table class="table table-bordered table-hover text-center">
                     <thead>

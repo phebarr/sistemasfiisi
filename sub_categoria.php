@@ -26,7 +26,7 @@ $result = mysqli_query($mysqli, $sql);
         <section class="container" style="margin-top: 70px" >
             <div class="row">
                 <div class="col-md-8">
-                    <h3 style="margin:0">Listado de la Tabla Productos</h3>
+                    <h3 style="margin:0">Listado de la Tabla Sub Categoría</h3>
                 </div>                
                 <div class="col-md-4 text-right">
                     <a href="prod_add.php" class="btn btn-success">
